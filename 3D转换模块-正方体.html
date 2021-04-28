@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>肖梦贤的专属小屋</title>
+    <style>
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+        body{
+            background: black;
+            overflow: hidden;
+        }
+        ul{
+            width: 200px;
+            height: 200px;
+            /*border: 1px solid #000;*/
+            box-sizing: border-box;
+            margin: 400px auto;
+            transform-style: preserve-3d;
+            animation-name: sz;
+            animation-duration: 100s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+
+        }
+        @keyframes sz {
+            from{
+                transform: rotateY(53deg) rotateX(55deg);
+            }
+            to{
+                transform: rotateY(3600deg) rotateX(3600deg) rotateZ(3600deg);
+            }
+        }
+        ul li{
+            transition: transform 1s;
+            list-style: none;
+            width: 300px;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+            font-size: 60px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        ul li:nth-child(1){
+            background: red;
+            transform: translate(-150px,0px) rotateY(-90deg);
+        }
+        ul li:nth-child(2){
+            background: blue;
+            transform: translate(150px,0px) rotateY(90deg);
+        }
+        ul li:nth-child(3){
+            background: yellow;
+            transform: translate(0px,150px) rotateX(-90deg);
+        }
+        ul li:nth-child(4){
+            background: orangered;
+            transform: translate(0px,-150px) rotateX(90deg);
+        }
+        ul li:nth-child(5){
+            background: fuchsia;
+            transform: translateZ(-150px) rotateX(180deg);
+        }
+        ul li:nth-child(6){
+            background: green;
+            transform: translateZ(150px) rotateY(0deg);
+        }
+        ul li{
+            box-shadow: 0px 0px 100px white;
+        }
+        ul:hover li:nth-child(1){
+            transform: translate(-200px,0px) rotateY(-90deg);
+            z-index: 0;
+        }
+        ul:hover li:nth-child(2){
+            transform: translate(200px,0px) rotateY(90deg);
+            z-index: 0;
+        }
+        ul:hover li:nth-child(3){
+            transform: translate(0px,200px) rotateX(-90deg);
+            z-index: 0;
+        }
+        ul:hover li:nth-child(4){
+            transform: translate(0px,-200px) rotateX(90deg);
+            z-index: 0;
+        }
+        ul:hover li:nth-child(5){
+            transform: translateZ(-200px) rotateX(180deg);
+            z-index: 0;
+        }
+        ul:hover li:nth-child(6){
+            transform: translateZ(200px) rotateY(0deg);
+            z-index: 0;
+        }
+        ul:hover{
+                animation-play-state: paused;
+        }
+        ul:hover li{
+            opacity: 0;
+        }
+        div{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: gg 3s 0s linear infinite;
+        }
+        @keyframes gg {
+            0%{
+                top: 100%;
+                bottom: 0;
+                left: 0;
+                opacity: 0;
+            }
+            50%{
+                top: 5%;
+                left: 50%;
+                bottom: 95%;
+                transform: scale(1.3);
+                opacity: 1;
+            }
+            100%{
+                top: 100%;
+                bottom: 0;
+                left: 100%;
+                opacity: 0;
+            }
+        }
+        ul li:nth-child(7){
+            background: url("img/xin.png") no-repeat;
+            background-clip: content-box;
+            box-shadow:none;
+            animation-play-state: paused;
+        }
+        ul:hover li:nth-child(7){
+            position: static;
+            color: red;
+            transform: rotateX(-90deg) scale(2.0);
+            z-index: 1;
+            opacity: 1;
+        }
+        .gk{
+            animation: gk 3s alternate ease-in infinite;
+            position: absolute ;
+            top: 100px;
+            left: 200px;
+            z-index: 0;
+        }
+        @keyframes gk {
+            from{
+                transform: scale(1.0);
+            }
+            to{
+                transform: scale(1.2);
+                z-index: 0;
+            }
+        }
+        .gk img{
+            width: 400px;
+        }
+        .audio{
+            position: absolute;
+            /*background: red;*/
+            width: 300px;
+            height: 600px;
+            top:20%;
+            right: 300px;
+            list-style: none;
+        }
+        ol li{
+            color: black;
+            font-size: 25px;
+            width: 300px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            transition: all 2s;
+        }
+        ol li:hover a{
+            color: white;
+        }
+        p{
+            display: inline-block;
+            position: absolute;
+            font-size: 30px;
+            color: white;
+            top: 0;
+            left:40%;
+        }
+        .text{
+            left: 50%;
+        }
+        .huawei{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+    <base href="" target="_blank">
+    <script src="3D转换模块-正方体.js"></script>
+</head>
+<body>
+<ul>
+    <li><img src="img/huawei.gif" alt="" class="huawei"></li>
+    <li><img src="img/huawei.gif" alt="" class="huawei"></li>
+    <li><img src="img/huawei.gif" alt="" class="huawei"></li>
+    <li><img src="img/huawei.gif" alt="" class="huawei"></li>
+    <li><img src="img/huawei.gif" alt="" class="huawei"></li>
+    <li><img src="img/huawei.gif" alt="" class="huawei"></li>
+    <li>肖梦贤</li>
+</ul>
+<ol class="audio">
+    <li><a href="背景音乐/世界这么大还是遇见你-程响-85595508.mp3" title="世界这么大还是遇见你" onclick="bm(this); return false;">世界这么大还是遇见你</a></li>
+    <li><a href="背景音乐/美人画卷-闻人听書_-152729615.mp3" title="美人画卷" onclick="bm(this); return false;">美人画卷</a></li>
+    <li><a href="背景音乐/金玟岐%20-%20岁月神偷%20(Demo).mp3" title="岁月神偷" onclick="bm(this); return false;">岁月神偷</a></li>
+    <li><a href="背景音乐/执迷不悟-小乐哥-149335244.mp3" title="执迷不悟" onclick="bm(this); return false;">执迷不悟</a></li>
+    <li><a href="背景音乐/当你走了-吾尊-60010489.mp3" title="当你走了" onclick="bm(this); return false;">当你走了</a></li>
+    <li><a href="背景音乐/你的酒馆对我打了烊-陈雪凝-63789244.mp3" title="你的酒馆对我打了烊" onclick="bm(this); return false;">你的酒馆对我打了烊</a></li>
+    <li><a href="" id="xh" onclick="xh();return false;">循环播放</a></li>
+    <li>
+        <audio src="" id="bf" autoplay="autoplay" loop="loop" hidden="hidden"></audio>
+    </li>
+</ol>
+<div>
+    <img src="img/xin.png" alt="">
+</div>
+<div class="gk"><img src="img/pic.16pic.jpeg" alt="" width="300px" height="300px"></div>
+<p>现在正在播放:</p>&nbsp;&nbsp;<p class="text" id="text">请选择</p>
+</body>
+</html>
